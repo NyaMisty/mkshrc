@@ -1,3 +1,3 @@
-# .mkshrc
-Systemlessly mksh.rc for better Terminal experience. Termux environment is also useable.
+# mkshrc
 
+This module sources `/sdcard/mkshrc` inside `/system/etc/mkshrc`, to achieve bashrc/bash_profile in `adb shell`

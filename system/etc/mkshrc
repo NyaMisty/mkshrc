@@ -17,7 +17,13 @@ PS4='[$EPOCHREALTIME] '; PS1='${|
 	return $e
 }$USER@$HOSTNAME:${PWD:-?} '"$PS1 "
 
+
+##
+## !!!!! Our mods to /system/etc/mkshrc starts below !!!!!
+##
+
 export TERM=xterm-256color
-# Uncomment the following lines if you want termux env!
-# export PATH=$PATH:/data/data/com.termux/files/usr/bin
-# export LD_PRELOAD=$LD_PRELOAD:/data/data/com.termux/files/usr/lib/libtermux-exec.so /data/data/com.termux/files/usr/bin/bash -l
+
+if [ -f "/sdcard/mkshrc" ]; then
+  . /sdcard/mkshrc
+fi
